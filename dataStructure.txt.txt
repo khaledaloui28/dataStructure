@@ -1,0 +1,50 @@
+Algorithme ProduitScalaire
+    Entrée : v1, v2 (deux vecteurs de même taille)
+    Sortie : produit scalaire
+
+    Début
+        produit ← 0
+        Pour i de 0 à taille(v1)-1
+            produit ← produit + (v1[i] * v2[i])
+        FinPour
+        Retourner produit
+    Fin
+FinAlgorithme
+
+
+Algorithme SommeDistincte
+    Entrée : set1, set2 (deux ensembles)
+    Sortie : somme des éléments distincts
+
+    Début
+        sum ← 0
+        Pour chaque élément de set1
+            Si élément n'est pas dans set2
+                sum ← sum + élément
+            FinSi
+        FinPour
+
+        Pour chaque élément de set2
+            Si élément n'est pas dans set1
+                sum ← sum + élément
+            FinSi
+        FinPour
+
+        Retourner sum
+    Fin
+FinAlgorithme
+
+
+Algorithme VerifierOrthogonalite
+    Entrée : v1, v2 (deux vecteurs de même taille)
+    Sortie : Vrai si orthogonaux, sinon Faux
+
+    Début
+        produit ← ProduitScalaire(v1, v2)
+        Si produit = 0
+            Retourner Vrai
+        Sinon
+            Retourner Faux
+        FinSi
+    Fin
+FinAlgorithme
